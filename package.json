@@ -1,0 +1,16 @@
+{
+  "name": "ambra",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test \"apps/api/src/shared/auth/auth-config.spec.ts\" \"apps/api/src/shared/database/tenant-prisma-middleware.spec.ts\" \"apps/api/src/modules/payments/payment-webhook.service.spec.ts\"",
+    "test:unit": "node --test \"apps/api/src/shared/auth/auth-config.spec.ts\" \"apps/api/src/shared/database/tenant-prisma-middleware.spec.ts\" \"apps/api/src/modules/payments/payment-webhook.service.spec.ts\"",
+    "type-check": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3"
+  }
+}
